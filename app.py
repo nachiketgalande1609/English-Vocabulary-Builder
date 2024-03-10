@@ -90,6 +90,3 @@ def quiz():
     return render_template('quiz.html', question=question, choices=choices, correct_answer=correct_answer)
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
