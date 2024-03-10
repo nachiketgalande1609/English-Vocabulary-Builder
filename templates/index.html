@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="filter-links">
+    <a href="{{ url_for('home') }}">All</a>
+    {% for letter in "abcdefghijklmnopqrstuvwxyz" %}
+    <a href="{{ url_for('filter_by_letter', letter=letter) }}">{{ letter|upper }}</a>
+    {% endfor %}
+</div>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="list-group">
+            {% for word in data_dict %}
+            <a href="#" class="list-group-item list-group-item-action word-link" data-word="{{ word.Word }}">
+                {{ word.Word }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="word-cards d-flex align-items-center">
+            <!-- Inside the loop where you generate word cards -->
+            {% for word in data_dict %}
+            <div class="card word-card" data-word="{{ word.Word }}" style="display: none;">
+                <!-- Card body with flex layout -->
+                <div class="card-body d-flex align-items-center justify-content-between">
+                    <!-- Previous button -->
+                    <button class="btn btn-primary btn-sm card-btn left" onclick="showPreviousWord()">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+
+                    <!-- Card content -->
+                    <div class="card-content">
+                        <h5 class="card-title">{{ word.Word }}</h5>
+                        <i class="bi bi-volume-up-fill ml-2" onclick="speak('{{ word.Word }}')"></i>
+                        <p class="card-text">{{ word.Meaning }}</p>
+                        <hr>
+                        <p class="card-text"><strong>Sentence:</strong> {{ word.Sentence|safe }}</p>
+                        <p class="card-text mt-3">
+                            {% for synonym in word.Synonym %}
+                            <a class="synonym-link mb-2" onclick="speak('{{ synonym }}')">{{ synonym }}</a>
+                            {% endfor %}
+                        </p>
+                    </div>
+
+                    <!-- Next button -->
+                    <button class="btn btn-primary btn-sm card-btn right" onclick="showNextWord()">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

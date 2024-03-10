@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="quizContainer" class="d-flex justify-content-center">
+    <div class="quiz-card">
+        <p id="question">{{ question }}</p>
+        <hr>
+        <form id="quizForm">
+            {% for choice in choices %}
+            <input type="radio" name="answer" value="{{ choice }}"> <span class="choices">{{ choice }}</span><br>
+            {% endfor %}
+
+            <input type="hidden" name="correct_answer" value="{{ correct_answer }}">
+            <input id="submit-btn" class="btn btn-primary quiz-btn" type="button" value="Submit" onclick="showResult()">
+        </form>
+        <div id="result" style="display: none;"></div>
+        <button id="nextButton" class="btn btn-primary quiz-btn" onclick="nextQuestion()" style="display: none;">Next</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    function showResult() {
+        const userAnswer = document.querySelector('input[name="answer"]:checked');
+        const correctAnswer = "{{ correct_answer }}";
+        const resultDiv = document.getElementById("result");
+        const nextButton = document.getElementById("nextButton");
+        const submitBtn = document.getElementById("submit-btn");
+
+        if (userAnswer) {
+            if (userAnswer.value === correctAnswer) {
+                resultDiv.innerHTML = "Correct! Well done.";
+                resultDiv.style.backgroundColor = '#0e822b';
+            } else {
+                resultDiv.innerHTML = `Sorry, the correct answer was &rarr;	 <b>${correctAnswer}</b>.`;
+                resultDiv.style.backgroundColor = '#a6171e';
+            }
+
+            submitBtn.style.display = "none"
+            resultDiv.style.display = "block";
+            nextButton.style.display = "block";
+        } else {
+            alert("Please select an answer before submitting.");
+        }
+    }
+
+    function nextQuestion() {
+        document.getElementById("quizForm").reset();  // Reset the form
+        document.getElementById("submit-btn").style.display = "block"
+        document.getElementById("result").style.display = "none";
+        document.getElementById("nextButton").style.display = "none";
+        // You can add logic to fetch and display the next question here
+        // For simplicity, let's reload the page for a new question
+        location.reload();
+    }
+</script>
+{% endblock %}
