@@ -16,7 +16,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container nav-container">
             <a class="navbar-brand" href="{{ url_for('home') }}">Barrons GRE High-Frequency 333 Words Vocabulary List</a>
-            <a class="nav-item nav-link active" href="{{ url_for('quiz') }}">Quiz</a>
+            <ul class="navbar-nav mr-auto">
+                <li><a class="nav-item nav-link active" href="{{ url_for('quiz') }}">Quiz</a></li>
+                <li><a class="nav-item nav-link active" href="{{ url_for('additional') }}">800 Words</a></li>
+            </ul>
         </div>
     </nav>
 

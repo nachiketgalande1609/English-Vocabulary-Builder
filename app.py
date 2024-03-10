@@ -13,6 +13,12 @@ def home():
         data_dict = json.load(file)
     return render_template('index.html', data_dict=data_dict)
 
+@app.route('/800_words')
+def additional():
+    with open('words3.json', 'r', encoding='utf-8') as file:
+        data_dict = json.load(file)
+    return render_template('additional.html', data_dict=data_dict)
+
 # Route for text-to-speech
 @app.route('/speak', methods=['POST'])
 def speak():
@@ -37,14 +43,24 @@ def speak():
     return jsonify(success=True, audio_path=audio_path)
 
 # Route for filtering data
-@app.route('/filter/<letter>')
-def filter_by_letter(letter):
+@app.route('/333_words/<letter>')
+def filter_by_letter_333(letter):
     with open('words.json', 'r', encoding='utf-8') as file:
         data_dict = json.load(file)
     
     filtered_words = [word for word in data_dict if word['Word'].lower().startswith(letter)]
     
     return render_template('index.html', data_dict=filtered_words)
+
+# Route for filtering data
+@app.route('/800_words/<letter>')
+def filter_by_letter_800(letter):
+    with open('words3.json', 'r', encoding='utf-8') as file:
+        data_dict = json.load(file)
+    
+    filtered_words = [word for word in data_dict if word['Word'].lower().startswith(letter)]
+    
+    return render_template('additional.html', data_dict=filtered_words)
 
 # Route for the quiz
 @app.route('/quiz')
@@ -74,6 +90,6 @@ def quiz():
     return render_template('quiz.html', question=question, choices=choices, correct_answer=correct_answer)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
 

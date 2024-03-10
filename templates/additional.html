@@ -2,11 +2,11 @@
 
 
 {% block content %}
-<h1 class="text-center mb-4">Barron's 333</h1>
+<h1 class="text-center mb-4">Barron's 800</h1>
 <div class="filter-links">
-    <a href="{{ url_for('home') }}">All</a>
+    <a href="{{ url_for('additional') }}">All</a>
     {% for letter in "abcdefghijklmnopqrstuvwxyz" %}
-    <a href="{{ url_for('filter_by_letter_333', letter=letter) }}">{{ letter|upper }}</a>
+    <a href="{{ url_for('filter_by_letter_800', letter=letter) }}">{{ letter|upper }}</a>
     {% endfor %}
 </div>
 <div class="row">
