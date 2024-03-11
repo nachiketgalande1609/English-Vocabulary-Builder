@@ -8,8 +8,6 @@ This Flask application is designed to assist users, particularly those preparing
 - [Setup](#setup)
 - [Usage](#usage)
 - [Routes](#routes)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -35,15 +33,54 @@ Preparing for the GRE exam involves mastering an extensive vocabulary. Reading f
 
 ## Setup
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Prerequisites
 
-2. Run the application:
-   ```bash
-   python app.py
-   ```
+- Python
+- virtualenv
+
+### Setting up a Virtual Environment
+
+It is recommended to create and activate a virtual environment to manage dependencies. Follow these steps:
+
+1. Open a terminal or command prompt in the project directory.
+
+2. Create a virtual environment (replace `venv` with your preferred name):
+
+    ```bash
+    virtualenv venv
+    ```
+
+3. Activate the virtual environment:
+
+    - On Windows:
+
+        ```bash
+        .\venv\Scripts\activate
+        ```
+
+    - On macOS and Linux:
+
+        ```bash
+        source venv/bin/activate
+        ```
+
+### Installing Dependencies
+
+Install the required dependencies using the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Application
+
+Ensure that the virtual environment is activated before running the application.
+
+```bash
+python app.py
+```
+
+Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your web browser to access the application.
 
 ## Usage
 
@@ -61,11 +98,3 @@ Preparing for the GRE exam involves mastering an extensive vocabulary. Reading f
 - **Additional Words Page**: [http://localhost:5000/800_words](http://localhost:5000/800_words)
 - **Text-to-Speech Endpoint**: [http://localhost:5000/speak](http://localhost:5000/speak) (POST request)
 - **Quiz Page**: [http://localhost:5000/quiz](http://localhost:5000/quiz)
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
