@@ -1,61 +1,61 @@
-# English Vocabulary Builder
+GRE Vocabulary Learning App
+This Flask application is designed to assist users, particularly those preparing for the GRE exam, in learning and memorizing vocabulary words. The app provides a user-friendly interface to explore and practice GRE words from Barron's 333 and Barron's 800 lists. Additionally, it offers a quiz feature to test your knowledge.
 
-This repository contains a simple Flask web application for a word quiz. The application allows users to explore a list of words, listen to their pronunciation, and participate in a quiz to test their knowledge.
+Table of Contents
+Introduction
+Features
+Setup
+Usage
+Routes
+Contributing
+License
+Introduction
+Preparing for the GRE exam involves mastering an extensive vocabulary. Reading from traditional documents can be challenging, and to address this, the GRE Vocabulary Learning App was created. The application simplifies the process of memorizing words by providing interactive features and detailed information about each word.
 
-## Features
+Features
+Home Page
 
-- **Home Page**: Displays a list of words along with their meanings.
-- **Additional Words Page**: Provides an extended list of words.
-- **Text-to-Speech**: Utilizes the `pyttsx3` library to convert text to speech for selected words.
-- **Filtering**: Allows users to filter words based on the starting letter.
-- **Quiz**: Offers a quiz feature where users can test their knowledge by answering questions about the meanings of words.
+Displays words from the Barron's 333 list.
+Users can filter words by starting letter.
+Additional Words Page
 
-## Setup
+Presents words from the Barron's 800 list.
+Allows filtering by starting letter.
+Text-to-Speech
 
-1. Clone the repository:
+Converts selected words into speech.
+Provides an audio file for pronunciation practice.
+Quiz
 
-   ```bash
-   git clone https://github.com/your-username/word-quiz-app.git
-   cd word-quiz-app
-   ```
+Tests users' knowledge with a random word from the Barron's 333 list.
+Multiple-choice format with feedback on correct answers.
+Setup
+Install dependencies:
 
-2. Install dependencies:
+bash
+Copy code
+pip install -r requirements.txt
+Run the application:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+bash
+Copy code
+python app.py
+Usage
+Access the home page at http://localhost:5000/ to explore Barron's 333 words.
 
-3. Run the application:
+Navigate to http://localhost:5000/800_words for Barron's 800 words.
 
-   ```bash
-   python app.py
-   ```
+Use the quiz feature at http://localhost:5000/quiz to test your knowledge.
 
-   Access the application by navigating to `http://localhost:5000` in your web browser.
+Utilize the text-to-speech feature by making a POST request to http://localhost:5000/speak with the selected word.
 
-## Usage
+Routes
+Home Page: http://localhost:5000/
+Additional Words Page: http://localhost:5000/800_words
+Text-to-Speech Endpoint: http://localhost:5000/speak (POST request)
+Quiz Page: http://localhost:5000/quiz
+Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-- Visit the home page to explore a list of words and their meanings.
-- Click on the "Additional Words" link to access an extended list of words.
-- Use the filter options to narrow down the list of words based on the starting letter.
-- Click on the "Listen" button to hear the pronunciation of a selected word.
-- Participate in the quiz by navigating to the "Quiz" page.
-
-## Dependencies
-
-- Flask
-- pyttsx3
-
-## File Structure
-
-- `app.py`: The main Flask application file.
-- `templates/`: Contains HTML templates for different pages.
-- `static/audio/`: Stores generated audio files for text-to-speech.
-
-## Contributing
-
-Feel free to contribute to the project by opening issues or submitting pull requests. Ensure that your code follows the PEP 8 style guide.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+License
+This project is licensed under the MIT License.
