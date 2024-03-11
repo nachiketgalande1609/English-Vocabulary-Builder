@@ -204,3 +204,75 @@ u {
     font-size: 25px !important;
     margin-left: 5px;
 }
+
+@media only screen and (max-width: 900px) {
+    .list-group-item {
+        padding: 5px;
+    }
+
+    .list-group-item span {
+        font-size: 14px;
+    }
+
+    .card-title {
+        font-size: 34px;
+    }
+
+    .card-text {
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-content {
+        margin: 0;
+    }
+
+    .synonym-link {
+        padding: 10px;
+        line-height: 15px;
+        margin-bottom: 5px;
+    }
+
+    .word-card {
+        padding: 0;
+    }
+
+    hr {
+        margin: 5px 0;
+    }
+
+    .bi-volume-up-fill {
+        font-size: 30px;
+    }
+
+    .container {
+        margin: 10px;
+    }
+
+    .card {
+        width: 62%;
+        left: 28%;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .nav-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .filter-links a {
+        font-size: 16px;
+        z-index: 100;
+    }
+  }

@@ -10,7 +10,7 @@
     {% endfor %}
 </div>
 <div class="row">
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-4 col-sm-3">
         <div class="list-group">
             {% for word in data_dict %}
             <a href="#" class="list-group-item list-group-item-action word-link" data-word="{{ word.Word }}">
@@ -19,7 +19,7 @@
             {% endfor %}
         </div>
     </div>
-    <div class="col-lg-8">
+    <div class="col-lg-8 col-md-8 col-sm-9">
         <div class="word-cards d-flex align-items-center">
             <!-- Inside the loop where you generate word cards -->
             {% for word in data_dict %}
@@ -40,7 +40,7 @@
                         <p class="card-text"><strong>Sentence:</strong> {{ word.Sentence|safe }}</p>
                         <p class="card-text mt-3">
                             {% for synonym in word.Synonym %}
-                            <a class="synonym-link mb-2" onclick="speak('{{ synonym }}')">{{ synonym }}</a>
+                            <a class="synonym-link" onclick="speak('{{ synonym }}')">{{ synonym }}</a>
                             {% endfor %}
                         </p>
                     </div>
