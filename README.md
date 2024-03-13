@@ -82,6 +82,20 @@ python app.py
 
 Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your web browser to access the application.
 
+## Screenshots
+
+### 333 Words Page
+
+<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/home.png?raw=true"  alt="333 words page">
+
+### 800 Words Page
+
+<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/800.png?raw=true"  alt="333 words page">
+
+### Quiz Page
+
+<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/quiz.png?raw=true"  alt="333 words page">
+
 ## Usage
 
 1. Access the home page at [http://localhost:5000/](http://localhost:5000/) to explore Barron's 333 words.
