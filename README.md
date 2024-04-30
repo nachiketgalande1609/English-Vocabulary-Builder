@@ -86,15 +86,15 @@ Visit [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your web browser to ac
 
 ### 333 Words Page
 
-<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/home.png?raw=true"  alt="333 words page">
+<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/home_mac.png?raw=true"  alt="333 words page">
 
 ### 800 Words Page
 
-<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/800.png?raw=true"  alt="333 words page">
+<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/800_mac.png?raw=true"  alt="333 words page">
 
 ### Quiz Page
 
-<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/quiz.png?raw=true"  alt="333 words page">
+<img  src="https://github.com/nachiketgalande1609/English-Vocabulary-Builder/blob/main/screenshots/quiz_mac.png?raw=true"  alt="333 words page">
 
 ## Usage
 
