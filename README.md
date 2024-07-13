@@ -1,6 +1,6 @@
 # GRE Vocabulary Learning App
 
-This Flask application is designed to assist users, particularly those preparing for the GRE exam, in learning and memorizing vocabulary words. The app provides a user-friendly interface to explore and practice GRE words from Barron's 333 and Barron's 800 lists. Additionally, it offers a quiz feature to test your knowledge.
+This Flask application is designed to assist students, particularly those preparing for the GRE/other competitive exams, in learning and memorizing vocabulary words. The app provides a user-friendly interface to explore and practice GRE words from Barron's 333 and Barron's 800 lists. Additionally, it offers a quiz feature to test your knowledge.
 
 ## Table of Contents
 - [Introduction](#introduction)
